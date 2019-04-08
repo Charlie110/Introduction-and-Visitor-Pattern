@@ -2,11 +2,22 @@
 #define _MAX_HPP
 
 #include "tree.hpp"
-
+#include <limits>
 // You will need to implement a complete visitor that
 // finds the maximum element in the tree. You can use
 // the print and sum visitors for reference.
 
 // WRITEME
+class MaxVisitor : public Visitor{
+	public:
+		int max;
+		MaxVisitor(): max(0){}
+		MaxVisitor(Node* root){
+			max=root->value;
+		}
+		
+		void visitNode(Node* node);	
+}; 
+
 
 #endif

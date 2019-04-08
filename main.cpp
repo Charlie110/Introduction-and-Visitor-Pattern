@@ -94,7 +94,12 @@ int main(int argc, char* argv[]) {
 	// Where XX is the maximum element's value (an integer).
 	
 	// WRITEME
-	
+	MaxVisitor* max = new MaxVisitor(tree);	
+	std::cout<<"Max: ";
+	tree->accept(max);
+	std::cout<<max->max<<std::endl;
+	delete max;
+
 	deleteTree(tree);
 	return 0;
 }
